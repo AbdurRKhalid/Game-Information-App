@@ -22,6 +22,42 @@
       <ion-button expand="block" color="success" (click)="loadGameName()">Search
           <ion-icon name="search"></ion-icon>
       </ion-button>
+      <ion-spinner name="dots" *ngIf="isLoading"></ion-spinner>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            Name
+          </ion-col>
+          <ion-col>
+            {{name}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+              Release Date
+            </ion-col>
+            <ion-col>
+              {{releaseDate}}
+            </ion-col>
+          </ion-row>
+            <ion-row>
+                <ion-col>
+                  Rating
+                </ion-col>
+                <ion-col>
+                  {{rating}}
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col>
+                    Metacritic
+                  </ion-col>
+                  <ion-col>
+                    {{metacritic}}
+                  </ion-col>
+                </ion-row>
+      </ion-grid>
+
 </ion-content>
 
 <ion-footer>
