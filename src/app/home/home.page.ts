@@ -9,14 +9,18 @@ import { ApiService } from './api.service';
 export class HomePage {
 
   gameName = "";
+  respone: any;
+  isLoading = false;
   constructor(private apiService: ApiService) {}
 
   public loadGameName(){
+    this.isLoading = true;
     this.apiService.getGameInfo(this.gameName).subscribe(
       (data: any) => {
-        console.log(data);
+        this.respone = data.results[0];
       }
     )
+    this.isLoading = false;
   };
 
 }

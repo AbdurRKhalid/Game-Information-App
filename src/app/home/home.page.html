@@ -22,6 +22,18 @@
       <ion-button expand="block" color="success" (click)="loadGameName()">Search
           <ion-icon name="search"></ion-icon>
       </ion-button>
+      <ion-spinner name="dots" *ngIf="isLoading"></ion-spinner>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            Column One
+          </ion-col>
+          <ion-col>
+            Column Two
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
 </ion-content>
 
 <ion-footer>
