@@ -10,7 +10,7 @@ export class ApiService {
   constructor(private http: HttpClient) {
    }
 
-   getGameInfo(GameName: String){
+  public getGameInfo(GameName: String){
      return this.http.get(this.baseUrl+GameName);
    }
 }

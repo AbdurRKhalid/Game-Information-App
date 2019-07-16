@@ -9,9 +9,14 @@ import { ApiService } from './api.service';
 export class HomePage {
 
   gameName = "";
-  constructor(apiService: ApiService) {}
+  constructor(private apiService: ApiService) {}
 
   public loadGameName(){
-  }
+    this.apiService.getGameInfo(this.gameName).subscribe(
+      (data: any) => {
+        console.log(data);
+      }
+    )
+  };
 
 }
