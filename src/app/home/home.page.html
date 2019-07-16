@@ -7,7 +7,8 @@
 </ion-header>
 
 <ion-content>
-    <ion-card>
+    
+  <ion-card>
       <ion-item>
           <ion-icon name="walk" slot="start"></ion-icon>
       </ion-item>
@@ -15,11 +16,16 @@
           <ion-card-subtitle>Get Information of Every Game You Want To Play or Planning To Play!</ion-card-subtitle>
           <ion-card-title>Game Information Application</ion-card-title>
         </ion-card-header>
-      
-        <ion-card-content>
-          In this Application, you can get information of Every game you want, just type the Name of the Game in the Search Box 
-          and Press the Search Button in Order to Find About your Favourite or Dream Game.
-        </ion-card-content>
-      </ion-card>
-  <ion-button expand="block">Block Button</ion-button>
+  </ion-card>      
+  
+  <ion-input placeholder="Enter Input" [(ngModel)]="gameName"></ion-input>
+      <ion-button expand="block" color="success">Search
+          <ion-icon name="search"></ion-icon>
+      </ion-button>
 </ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+      <ion-title>Hybrid Application Created By Abdur Rehman Khalid!</ion-title>
+    </ion-toolbar>
+  </ion-footer>

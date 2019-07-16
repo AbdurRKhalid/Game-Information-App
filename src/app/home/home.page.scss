@@ -1,1 +1,7 @@
-
+ion-input {
+      text-align: center;
+      /* IF YOU ALSO WANT TO PUSH PLACHEHOLDER TO THE RIGHT USE THE FOLLOWING, IF NOT JUST DELETE THE ::-webkit-input-placeholder*/
+      ::-webkit-input-placeholder {
+        text-align: right;
+      }
+  }
