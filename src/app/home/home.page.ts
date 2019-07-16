@@ -9,7 +9,10 @@ import { ApiService } from './api.service';
 export class HomePage {
 
   gameName = "";
-  respone: any;
+  name = "";
+  releaseDate = "";
+  rating = "";
+  metacritic = "";
   isLoading = false;
   constructor(private apiService: ApiService) {}
 
@@ -17,7 +20,11 @@ export class HomePage {
     this.isLoading = true;
     this.apiService.getGameInfo(this.gameName).subscribe(
       (data: any) => {
-        this.respone = data.results[0];
+        this.name = data.results[0].name;
+        this.releaseDate = data.results[0].released;
+        this.rating = data.results[0].rating;
+        this.metacritic = data.results[0].metacritic;
+        console.log(data.results[0]);
       }
     )
     this.isLoading = false;
