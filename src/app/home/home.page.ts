@@ -7,6 +7,11 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  gameName = "";
   constructor() {}
+
+  public loadGameName(){
+    console.log(this.gameName);
+  }
 
 }
