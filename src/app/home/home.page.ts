@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from './api.service';
 
 @Component({
   selector: 'app-home',
@@ -8,10 +9,9 @@ import { Component } from '@angular/core';
 export class HomePage {
 
   gameName = "";
-  constructor() {}
+  constructor(apiService: ApiService) {}
 
   public loadGameName(){
-    console.log(this.gameName);
   }
 
 }
